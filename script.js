@@ -105,3 +105,12 @@ let celsiusTemperature = null;
 
 let fahreinheitLink = document.querySelector("#fahreinheit-link");
 fahreinheitLink.addEventListener("click", showFahreinheitTemperature);
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
